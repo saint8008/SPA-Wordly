@@ -3,3 +3,135 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.app-header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+.app-header p {
+    color: var(--muted);
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #d1d5db;
+    border-radius: 2px;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.search-btn {
+    padding: 0.8rem 1.4rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: var(--primary-dark);
+}
+
+.results {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+.hidden {
+    display: none;
+}
+
+.word-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#word-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.favorite-btn, .audio-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.pronunciation {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--muted);
+}
+
+.synonyms ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.synonyms li {
+    padding: 0.3rem 0.8rem;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.source {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+@media (max-width: 480px) {
+    .search-form {
+        flex-direction: column;
+    }
+
+    #word-title {
+        font-size: 1.6rem;
+    }
+}
