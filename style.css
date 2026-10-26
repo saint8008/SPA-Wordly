@@ -126,6 +126,28 @@ body {
     color: var(--muted);
 }
 
+.meaning-block {
+    margin-top: 1.2rem;
+}
+
+.part-of-speech {
+    font-style: italic;
+    color: var(--primary);
+}
+
+.meaning-block ol {
+    margin: 0.5rem 0 0 1.2rem;
+}
+
+.meaning-block li {
+    margin-bottom: 0.6rem;
+}
+
+.example {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
 @media (max-width: 480px) {
     .search-form {
         flex-direction: column;
