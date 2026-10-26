@@ -3,11 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css">
+    <link href="style.css" rel="stylesheet">
     <title>Wordly Dictionary</title>
 </head>
 <body>
-    
+    <header class="header">
+        <h1>Wordly Dictionary</h1>
+        <p>Search any word to see its meaning, pronunciation and more.</p>
+    </header>
+
+    <main class="container">
+        <form id="search-form" class="search-form">
+            <input 
+                type="text"
+                id="search-input"
+                class="search-input"
+                placeholder="Type a word..."
+                aria-label="Search for a word"
+                required
+            />
+
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+
+        <p id="status-message" class="status-message" aria-live="polite"></p>
+
+        <section id="results" class="results hidden">
+            <div class="word-header">
+                <h2 id="word-title"></h2>
+                <button id="favorite-btn" class="favorite-btn" aria-label="Save to favorites">☆</button>
+            </div>
+
+            <div class="pronunciation">
+                <span id="phonetic-text"></span>
+                <button id="audio-btn" class="audio-btn" aria-label="Play pronunciation">🔊</button>
+                <audio id="audio-player"></audio>
+            </div>
+
+            <div id="meanings" class="meanings"></div>
+
+            <div class="synonyms">
+                <h3>Synonyms</h3>
+                <ul id="synonyms-list"></ul>
+            </div>
+
+            <p class="source">Source: <a id="source-link" href="#" target="_blank" rel="noopener"></a></p>
+        </section>
+    </main>
+
+
     <script src="script.js"></script>
 </body>
 </html>
